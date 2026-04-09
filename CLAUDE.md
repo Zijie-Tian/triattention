@@ -9,6 +9,13 @@ See [.claude/rules/](.claude/rules/) for detailed project rules.
 | Rule | Description |
 |------|-------------|
 | [.claude/rules/documentation.md](.claude/rules/documentation.md) | Documentation management guidelines |
+| [.claude/rules/storage.md](.claude/rules/storage.md) | ModelScope download and storage management |
+
+## Project Skills
+
+| Skill | Description |
+|-------|-------------|
+| [.claude/skills/modelscope-download.md](.claude/skills/modelscope-download.md) | Download models and datasets from ModelScope |
 
 ## Project Documentation References
 
