@@ -16,7 +16,6 @@ build/
 .DS_Store
 
 # Environment and tooling
-.claude/
 .workflow/
 .env
 *.log
