@@ -37,6 +37,7 @@ tmp_eval/
 # Data files (symlinks handled separately)
 data/*.jsonl
 data/kvcache-rope
+docs/assets/rope_distributions
 brumo_2025.jsonl
 aime25.jsonl
 

@@ -1,0 +1,8 @@
+experiment:
+  gpus: auto
+  auto_gpu_fallback:
+    - 0
+  num_shards: 1
+runner_args:
+  num_samples_by_dataset: 
+    aime24: 2

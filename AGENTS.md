@@ -30,6 +30,7 @@ See [.feynman/rules/](.feynman/rules/) for detailed project rules. Following our
 | [docs/mlx.md](docs/mlx.md) | Apple Silicon MLX port setup and usage |
 | [docs/openclaw.md](docs/openclaw.md) | OpenClaw integration guide |
 | [docs/prefill_sparsity.md](docs/prefill_sparsity.md) | Extension of TriAttention to Prefill phase (Query-Pooling + Exact Key paradigm) |
+| [docs/kvcache-rope-dataset.md](docs/kvcache-rope-dataset.md) | KV cache and RoPE dataset analysis |
 
 ## Project Overview
 
