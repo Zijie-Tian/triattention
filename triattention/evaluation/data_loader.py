@@ -4,8 +4,12 @@
 
 import json
 import os
+from pathlib import Path
 from triattention.evaluation.utils import load_jsonl, lower_keys
 from datasets import load_dataset, Dataset, concatenate_datasets
+
+# Default dataset directory: ~/data/datasets
+DEFAULT_DATA_DIR = str(Path.home() / "data" / "datasets")
 
 
 # HuggingFace dataset sources for auto-download
@@ -57,7 +61,9 @@ def load_data_vanilla(path):
     return examples
 
 
-def load_data(data_name, split, data_dir="./data"):
+def load_data(data_name, split, data_dir=None):
+    if data_dir is None:
+        data_dir = DEFAULT_DATA_DIR
     data_file = f"{data_dir}/{data_name}/{split}.jsonl"
     if not os.path.exists(data_file):
         # Try auto-download from HuggingFace for known datasets

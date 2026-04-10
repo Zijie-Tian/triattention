@@ -10,6 +10,7 @@ See [.claude/rules/](.claude/rules/) for detailed project rules.
 |------|-------------|
 | [.claude/rules/documentation.md](.claude/rules/documentation.md) | Documentation management guidelines |
 | [.claude/rules/storage.md](.claude/rules/storage.md) | ModelScope download and storage management |
+| [.claude/rules/gpu.md](.claude/rules/gpu.md) | GPU configuration for running experiments |
 
 ## Project Skills
 
