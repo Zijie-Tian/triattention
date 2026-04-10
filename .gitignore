@@ -29,11 +29,14 @@ experiments/configs/
 experiments/models/
 experiments/stats/
 experiments/*.log
+experiments/datasets
+experiments/models
 logs/
 tmp_eval/
 
 # Data files (symlinks handled separately)
 data/*.jsonl
+data/kvcache-rope
 brumo_2025.jsonl
 aime25.jsonl
 

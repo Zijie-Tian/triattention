@@ -1,23 +1,23 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to AI agents (like Feynman) when working with code in this repository.
 
 ## Project Rules
 
-See [.claude/rules/](.claude/rules/) for detailed project rules. Following our document management principles, detailed guidelines are kept in their respective files, while this document serves as the index and brief summary.
+See [.feynman/rules/](.feynman/rules/) for detailed project rules. Following our document management principles, detailed guidelines are kept in their respective files, while this document serves as the index and brief summary.
 
 | Rule | Description |
 |------|-------------|
-| [.claude/rules/documentation.md](.claude/rules/documentation.md) | Documentation management guidelines (Detailed docs in `docs/` or rule files, summaries in index) |
-| [.claude/rules/storage.md](.claude/rules/storage.md) | ModelScope download and storage management (Models in `~/models/`, Datasets in `~/data/datasets/`) |
-| [.claude/rules/gpu.md](.claude/rules/gpu.md) | GPU configuration for running experiments (Use `--gpus` explicitly) |
-| [.claude/rules/agents_sync.md](.claude/rules/agents_sync.md) | Maintain synchronization between CLAUDE.md and AGENTS.md |
+| [.feynman/rules/documentation.md](.feynman/rules/documentation.md) | Documentation management guidelines (Detailed docs in `docs/` or rule files, summaries in index) |
+| [.feynman/rules/storage.md](.feynman/rules/storage.md) | ModelScope download and storage management (Models in `~/models/`, Datasets in `~/data/datasets/`) |
+| [.feynman/rules/gpu.md](.feynman/rules/gpu.md) | GPU configuration for running experiments (Use `--gpus` explicitly) |
+| [.feynman/rules/agents_sync.md](.feynman/rules/agents_sync.md) | Maintain synchronization between AGENTS.md and CLAUDE.md |
 
 ## Project Skills
 
 | Skill | Description |
 |-------|-------------|
-| [.claude/skills/modelscope-download.md](.claude/skills/modelscope-download.md) | Download models and datasets from ModelScope |
+| [.feynman/skills/modelscope-download.md](.feynman/skills/modelscope-download.md) | Download models and datasets from ModelScope |
 
 ## Project Documentation References
 
@@ -152,7 +152,7 @@ The package registers as a vLLM plugin via `entry_points` in `setup.py`. After i
 
 When creating custom agents for this project:
 
-1. **Location**: Place agent definitions in `.claude/agents/`
+1. **Location**: Place agent definitions in `.feynman/agents/`
 2. **Naming**: Use kebab-case: `my-agent.md`
 3. **Frontmatter**:
 ```markdown
@@ -185,7 +185,7 @@ description: Analyzes TriAttention performance
 
 When creating custom skills for this project:
 
-1. **Location**: Place skill definitions in `.claude/skills/`
+1. **Location**: Place skill definitions in `.feynman/skills/`
 2. **Naming**: Use kebab-case: `my-skill.md`
 3. **Frontmatter**:
 ```markdown
