@@ -23,7 +23,7 @@ See [.claude/rules/](.claude/rules/) for detailed project rules. Following our d
 
 | Document | Description |
 |----------|-------------|
-| [docs/environment.md](docs/environment.md) | Conda environment setup and dependencies |
+| [docs/environment-setup.md](docs/environment-setup.md) | 新机器环境配置详细指南 (硬件要求、依赖安装、验证) |
 | [docs/reproduction.md](docs/reproduction.md) | Experiment commands for reproducing paper results |
 | [docs/calibration.md](docs/calibration.md) | Generating custom Q/K frequency statistics |
 | [docs/results.md](docs/results.md) | Complete results tables and analysis |
