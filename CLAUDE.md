@@ -27,6 +27,7 @@ See [.claude/rules/](.claude/rules/) for detailed project rules.
 | [docs/results.md](docs/results.md) | Complete results tables and analysis |
 | [docs/mlx.md](docs/mlx.md) | Apple Silicon MLX port setup and usage |
 | [docs/openclaw.md](docs/openclaw.md) | OpenClaw integration guide |
+| [docs/feynman-environment.md](docs/feynman-environment.md) | Feynman-oriented project environment mapped from the existing Claude Code setup |
 
 ## Project Overview
 
