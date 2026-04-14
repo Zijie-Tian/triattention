@@ -109,28 +109,31 @@ def dataset_max_length(dataset: str, defaults: dict) -> int:
 
 
 def resolve_dataset_path(dataset: str) -> Path:
+    data_root = Path.home() / "data" / "datasets"
     candidates = [
+        data_root / dataset / "test.jsonl",
         PROJECT_ROOT / f"{dataset}.jsonl",
         REPO_ROOT / "data" / f"{dataset}.jsonl",
     ]
     if dataset == "math500":
         candidates.extend(
             [
+                data_root / "math" / "test.jsonl",
                 PROJECT_ROOT / "math.jsonl",
                 REPO_ROOT / "data" / "math.jsonl",
             ]
         )
     for candidate in candidates:
         if candidate.exists():
-            if candidate.name != f"{dataset}.jsonl":
+            if candidate != candidates[0]:
                 print(
                     f"[warn] dataset {dataset} resolved to {candidate}",
                     file=sys.stderr,
                 )
             return candidate
-    hint = PROJECT_ROOT / f"{dataset}.jsonl"
+    hint = data_root / dataset / "test.jsonl"
     raise FileNotFoundError(
-        f"Dataset file not found for {dataset}. Expected symlink at {hint}."
+        f"Dataset file not found for {dataset}. Looked for {hint} and legacy repo-local JSONL paths."
     )
 
 
