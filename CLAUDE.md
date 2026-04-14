@@ -29,9 +29,9 @@ See [.claude/rules/](.claude/rules/) for detailed project rules. Following our d
 | [docs/results.md](docs/results.md) | Complete results tables and analysis |
 | [docs/mlx.md](docs/mlx.md) | Apple Silicon MLX port setup and usage |
 | [docs/openclaw.md](docs/openclaw.md) | OpenClaw integration guide |
-<<<<<<< HEAD
 | [docs/prefill_sparsity.md](docs/prefill_sparsity.md) | Extension of TriAttention to Prefill phase (Query-Pooling + Exact Key paradigm) |
 | [docs/kvcache-rope-dataset.md](docs/kvcache-rope-dataset.md) | KV cache and RoPE dataset analysis |
+| [docs/aime24-single-sample-timing.md](docs/aime24-single-sample-timing.md) | Single-sample AIME24 timing measurements for Qwen3-8B TriAttention on GPU1 |
 
 ## Project Overview
 

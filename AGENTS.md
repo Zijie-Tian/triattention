@@ -31,6 +31,7 @@ See [.feynman/rules/](.feynman/rules/) for detailed project rules. Following our
 | [docs/openclaw.md](docs/openclaw.md) | OpenClaw integration guide |
 | [docs/prefill_sparsity.md](docs/prefill_sparsity.md) | Extension of TriAttention to Prefill phase (Query-Pooling + Exact Key paradigm) |
 | [docs/kvcache-rope-dataset.md](docs/kvcache-rope-dataset.md) | KV cache and RoPE dataset analysis |
+| [docs/aime24-single-sample-timing.md](docs/aime24-single-sample-timing.md) | Single-sample AIME24 timing measurements for Qwen3-8B TriAttention on GPU1 |
 
 ## Project Overview
 
