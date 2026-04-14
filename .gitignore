@@ -20,7 +20,7 @@ build/
 .env
 *.log
 
-# Experiment outputs and logs
+# Experiment outputs and local runs
 outputs/
 output_multi/
 experiments/outputs/
@@ -49,3 +49,4 @@ scripts/configs/aime25_llama_budget512_a6000_verify.yaml
 
 # Misc
 prompt.txt
+.omx/

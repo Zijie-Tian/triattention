@@ -2,7 +2,7 @@
 
 ## Principle
 
-Due to limited disk space on `/mnt/data` and the root partition, all large downloads (models, datasets) should be stored in `~/data` directory. Use **ModelScope** as the primary download source.
+Due to limited disk space on `/mnt/data` and the root partition, all large downloads (models, datasets) should be stored outside the repository using the project's preferred layout. Use **ModelScope** as the primary source for manual agent-managed downloads.
 
 ## Storage Locations
 
@@ -15,14 +15,14 @@ Due to limited disk space on `/mnt/data` and the root partition, all large downl
 
 ### 1. Model Storage
 
-- Download models to `~/models/` instead of project directory
+- Download models to `~/models/` instead of the project directory
 - Model checkouts should be at `~/models/<model-name>/`
-- Code should load models from `~/models/<model-name>/`
+- Code should load models from `~/models/<model-name>/` when manually wiring paths
 
 ### 2. Dataset Storage
 
 - Store datasets in `~/data/datasets/`
-- Update dataset path configurations accordingly
+- Update dataset path configurations accordingly when doing manual setup
 
 ### 3. Download Source: ModelScope
 
@@ -68,6 +68,7 @@ def download_dataset(dataset_name: str, repo_id: str):
 ### 4. Authentication
 
 ModelScope uses tokens stored in `~/.modelscope/credentials/`. Ensure the user is logged in:
+
 ```python
 from modelscope import HubApi
 api = HubApi()
@@ -78,22 +79,23 @@ Or use environment variable `MODELSCOPE_TOKEN`.
 
 ### 5. Checklist Before Downloading
 
-1. Check if target directory exists: `model_path.exists()`
-2. Check if directory is non-empty: `any(model_path.iterdir())`
-3. Only download if both conditions are False
-4. Print skip message if already exists
+1. Check if target directory exists
+2. Check if the directory is non-empty
+3. Only download if both conditions fail
+4. Print a skip message if the asset already exists
 
 ### 6. No Redundant Downloads
 
-- Never re-download if model/dataset already exists
+- Never re-download if a model or dataset already exists
 - Always verify before downloading
-- Use the downloaded path directly in model loading
+- Use the downloaded path directly in manual model loading
+- Do not commit large downloaded assets into this repository
 
 ## How to Apply
 
-When downloading models or datasets, always:
+When downloading models or datasets manually, always:
 1. Use ModelScope SDK (`modelscope` package)
 2. Download to `~/models/<model-name>/` for models
 3. Download to `~/data/datasets/<dataset-name>/` for datasets
-4. Check if already exists before downloading
-5. Load models from the downloaded path
+4. Check if the target already exists before downloading
+5. Avoid silently rewriting existing runtime code paths unless the task explicitly asks for that change

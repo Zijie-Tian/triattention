@@ -23,7 +23,7 @@ See [.feynman/rules/](.feynman/rules/) for detailed project rules. Following our
 
 | Document | Description |
 |----------|-------------|
-| [docs/environment.md](docs/environment.md) | Conda environment setup and dependencies |
+| [docs/environment-setup.md](docs/environment-setup.md) | 新机器环境配置详细指南 (硬件要求、依赖安装、验证) |
 | [docs/reproduction.md](docs/reproduction.md) | Experiment commands for reproducing paper results |
 | [docs/calibration.md](docs/calibration.md) | Generating custom Q/K frequency statistics |
 | [docs/results.md](docs/results.md) | Complete results tables and analysis |
@@ -147,6 +147,66 @@ The package registers as a vLLM plugin via `entry_points` in `setup.py`. After i
 - Use `torch.float32` explicitly for compute dtype; `torch.bfloat16/float16` for model dtype
 - Grouped imports with standard library first, then third-party, then local
 
+## Ground Rules
+
+### 1) Documentation management
+
+- Detailed documentation belongs in `docs/`.
+- If you add a new doc, add a reference to both `CLAUDE.md` and `AGENTS.md`.
+- Use descriptive kebab-case doc names.
+
+### 2) Model and dataset storage
+
+For manual download/setup tasks, prefer the existing project storage rule:
+
+- models → `~/models/`
+- datasets → `~/data/datasets/`
+- prefer ModelScope for manual agent-managed downloads
+- do not re-download if the target directory already exists and is non-empty
+
+Do **not** silently rewrite existing project code paths that currently fetch from other sources unless the task explicitly asks for that change.
+
+### 3) Artifact discipline
+
+- scratch notes → `notes/`
+- local experiment scripts/logs/results → `experiments/` (gitignored)
+- reviews, summaries, result memos → `outputs/`
+- paper-style writeups → `papers/`
+
+Use durable files for substantial work instead of leaving important context only in the chat.
+
+If an experiment helper should be version-controlled, put it under `scripts/` or the package source tree instead of `experiments/`.
+
+### 4) Evidence discipline
+
+- Do not say a result is reproduced, verified, or confirmed unless you actually ran the check and can point to the command output, log, or artifact.
+- Separate direct observations from inferences.
+- Keep exact commands, config paths, and result file paths for quantitative claims.
+
+### 5) Data safety
+
+- Do not modify raw datasets or external dataset symlinks casually.
+- Prefer writing derived artifacts to `outputs/`, `notes/`, or `experiments/`.
+
+## Task Ledger Conventions
+
+For substantial work, maintain a small task ledger in the active plan or note file.
+
+- Track status as `todo`, `in_progress`, `done`, `blocked`, or `superseded`.
+- Do not silently skip failed checks.
+- Record where outputs were written.
+
+## Verification Gates
+
+Before delivering a substantial result, check the ones that apply:
+
+- environment/import smoke test ran
+- command lines recorded
+- config paths recorded
+- result/log paths recorded
+- unsupported claims downgraded or removed
+- new docs referenced from `CLAUDE.md` and `AGENTS.md`
+
 ## Agents and Skills Conventions
 
 ### Agents
@@ -224,3 +284,7 @@ trigger: /my-skill
 - **Document triggers**: Always specify how to invoke the agent/skill
 - **Include examples**: Show concrete usage examples
 - **Keep focused**: Avoid combining unrelated functionality
+
+## Session Logging
+
+Use durable session notes for meaningful work. Keep logs under `notes/session-logs/`.
