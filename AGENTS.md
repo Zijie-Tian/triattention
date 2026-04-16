@@ -11,6 +11,7 @@ See [.feynman/rules/](.feynman/rules/) for detailed project rules. Following our
 | [.feynman/rules/documentation.md](.feynman/rules/documentation.md) | Documentation management guidelines (Detailed docs in `docs/` or rule files, summaries in index) |
 | [.feynman/rules/storage.md](.feynman/rules/storage.md) | ModelScope download and storage management (Models in `~/models/`, Datasets in `~/data/datasets/`) |
 | [.feynman/rules/gpu.md](.feynman/rules/gpu.md) | GPU configuration for running experiments (Use `--gpus` explicitly) |
+| [.feynman/rules/runner-defaults.md](.feynman/rules/runner-defaults.md) | Canonical execution-configuration rule: set GPU, shards, conda env, lengths, and runner defaults via `triattention/configs/shared/runner_defaults.yaml` |
 | [.feynman/rules/agents_sync.md](.feynman/rules/agents_sync.md) | Maintain synchronization between AGENTS.md and CLAUDE.md |
 
 ## Project Skills
