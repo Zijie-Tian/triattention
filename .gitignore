@@ -23,6 +23,7 @@ build/
 # Experiment outputs and local runs
 outputs/
 output_multi/
+experiments/*
 experiments/outputs/
 experiments/logs/
 experiments/configs/
@@ -50,3 +51,7 @@ scripts/configs/aime25_llama_budget512_a6000_verify.yaml
 # Misc
 prompt.txt
 .omx/
+
+task_plan.md
+progress.md
+findings.md

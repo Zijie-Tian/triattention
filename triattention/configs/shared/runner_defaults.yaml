@@ -2,7 +2,8 @@ experiment:
   conda_env: triattention
   runner_path: scripts/worker.py
   merged_dir_name: merged
-  gpus: auto
+  gpus:
+    - 0
   auto_gpu_fallback:
     - 0
     - 1
