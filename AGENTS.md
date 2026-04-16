@@ -1,24 +1,24 @@
 # AGENTS.md
 
-This file provides guidance to AI agents (like Feynman) when working with code in this repository.
+This file provides guidance to AI agents (like Codex) when working with code in this repository.
 
 ## Project Rules
 
-See [.feynman/rules/](.feynman/rules/) for detailed project rules. Following our document management principles, detailed guidelines are kept in their respective files, while this document serves as the index and brief summary.
+See [.codex/rules/](.codex/rules/) for detailed project rules. Following our document management principles, detailed guidelines are kept in their respective files, while this document serves as the index and brief summary.
 
 | Rule | Description |
 |------|-------------|
-| [.feynman/rules/documentation.md](.feynman/rules/documentation.md) | Documentation management guidelines (Detailed docs in `docs/` or rule files, summaries in index) |
-| [.feynman/rules/storage.md](.feynman/rules/storage.md) | ModelScope download and storage management (Models in `~/models/`, Datasets in `~/data/datasets/`) |
-| [.feynman/rules/gpu.md](.feynman/rules/gpu.md) | GPU configuration for running experiments (Use `--gpus` explicitly) |
-| [.feynman/rules/runner-defaults.md](.feynman/rules/runner-defaults.md) | Canonical execution-configuration rule: set GPU, shards, conda env, lengths, and runner defaults via `triattention/configs/shared/runner_defaults.yaml` |
-| [.feynman/rules/agents_sync.md](.feynman/rules/agents_sync.md) | Maintain synchronization between AGENTS.md and CLAUDE.md |
+| [.codex/rules/documentation.md](.codex/rules/documentation.md) | Documentation management guidelines (Detailed docs in `docs/` or rule files, summaries in index) |
+| [.codex/rules/storage.md](.codex/rules/storage.md) | ModelScope download and storage management (Models in `~/models/`, Datasets in `~/data/datasets/`) |
+| [.codex/rules/gpu.md](.codex/rules/gpu.md) | GPU configuration for running experiments (Use `--gpus` explicitly) |
+| [.codex/rules/runner-defaults.md](.codex/rules/runner-defaults.md) | Canonical execution-configuration rule: set GPU, shards, conda env, lengths, and runner defaults via `triattention/configs/shared/runner_defaults.yaml` |
+| [.codex/rules/agents_sync.md](.codex/rules/agents_sync.md) | Maintain synchronization between AGENTS.md and CLAUDE.md |
 
 ## Project Skills
 
 | Skill | Description |
 |-------|-------------|
-| [.feynman/skills/modelscope-download.md](.feynman/skills/modelscope-download.md) | Download models and datasets from ModelScope |
+| [.codex/skills/modelscope-download.md](.codex/skills/modelscope-download.md) | Download models and datasets from ModelScope |
 
 ## Project Documentation References
 
@@ -215,7 +215,7 @@ Before delivering a substantial result, check the ones that apply:
 
 When creating custom agents for this project:
 
-1. **Location**: Place agent definitions in `.feynman/agents/`
+1. **Location**: Place agent definitions in `.codex/agents/`
 2. **Naming**: Use kebab-case: `my-agent.md`
 3. **Frontmatter**:
 ```markdown
@@ -248,7 +248,7 @@ description: Analyzes TriAttention performance
 
 When creating custom skills for this project:
 
-1. **Location**: Place skill definitions in `.feynman/skills/`
+1. **Location**: Place skill definitions in `.codex/skills/`
 2. **Naming**: Use kebab-case: `my-skill.md`
 3. **Frontmatter**:
 ```markdown
