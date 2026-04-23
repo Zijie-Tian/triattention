@@ -3,7 +3,7 @@ experiment:
   runner_path: scripts/worker.py
   merged_dir_name: merged
   gpus:
-    - 0
+    - 1
   auto_gpu_fallback:
     - 0
     - 1

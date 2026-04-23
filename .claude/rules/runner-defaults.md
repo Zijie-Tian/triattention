@@ -23,6 +23,23 @@ This file is the required control surface for:
 
 Generated configs under `experiments/configs/generated/` are **artifacts**, not the source of truth.
 
+## Config-First Change Rule
+
+If the requested behavior can be expressed through the existing configuration surfaces, Claude must implement it by editing config, **not** by editing Python launch code or shell wrappers.
+
+In particular, do **not** patch files such as:
+
+- `scripts/cli.py`
+- `scripts/dispatch.py`
+- `scripts/worker.py`
+- `scripts/experiments/**/*.sh`
+
+just to change durable execution behavior that already belongs in config.
+
+Config changes should go through the appropriate YAML source of truth first (for example `triattention/configs/shared/runner_defaults.yaml` or the relevant method/config file), then flow through the normal generation path.
+
+Only change code when the required behavior is genuinely impossible to express with the current config surface or when the config plumbing itself is broken. In that case, Claude must explicitly note why a config-only change was insufficient.
+
 ## Hard Rule
 
 For durable project workflows, **do not** treat shell flags, ad-hoc environment variables, or hand-edited generated YAMLs as the primary configuration mechanism.
