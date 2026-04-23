@@ -9,6 +9,7 @@ See [.codex/rules/](.codex/rules/) for detailed project rules. Following our doc
 | Rule | Description |
 |------|-------------|
 | [.codex/rules/documentation.md](.codex/rules/documentation.md) | Documentation management guidelines (Detailed docs in `docs/` or rule files, summaries in index) |
+| [.codex/rules/imagegen.md](.codex/rules/imagegen.md) | Codex imagegen outputs must be staged under `.codex/generated_images/` |
 | [.codex/rules/storage.md](.codex/rules/storage.md) | ModelScope download and storage management (Models in `~/models/`, Datasets in `~/data/datasets/`) |
 | [.codex/rules/gpu.md](.codex/rules/gpu.md) | GPU configuration for running experiments (Use `--gpus` explicitly) |
 | [.codex/rules/runner-defaults.md](.codex/rules/runner-defaults.md) | Canonical execution-configuration rule: set GPU, shards, conda env, lengths, and runner defaults via `triattention/configs/shared/runner_defaults.yaml` |

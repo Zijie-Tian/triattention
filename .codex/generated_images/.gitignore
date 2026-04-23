@@ -1,0 +1,4 @@
+# Keep this directory for local Codex imagegen outputs while avoiding
+# accidental commits of generated binary image artifacts.
+*
+!.gitignore
